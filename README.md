@@ -15,7 +15,7 @@ The project is divided into two parts:
 
 ## Installation
 
-1. Clone or download the repository with the NFL play-by-play data files from [here](https://github.com/ryurko/nfldataR/tree/master/legacy_data/season_play_by_play).
+1. Clone or download the repository with the NFL play-by-play data files from [here](https://github.com/ryurko/nflscrapR-data/tree/master/legacy_data/season_play_by_play).
 2. Place all the downloaded files in a folder named ``dataprimeraprogramda''.
 3. Make sure you have Python installed on your system.
 

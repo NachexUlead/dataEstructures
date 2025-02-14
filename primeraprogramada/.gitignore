@@ -1,4 +1,4 @@
-results/*.csv
+*.csv
 
 **/__pycache__/
 

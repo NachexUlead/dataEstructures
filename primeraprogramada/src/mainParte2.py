@@ -1,5 +1,5 @@
 from comparator import PlayComparator
-from primeraprogramada.src.dataReader import DataReader
+from dataReader import DataReader
 from sorting import Sorting
 import time
 import csv

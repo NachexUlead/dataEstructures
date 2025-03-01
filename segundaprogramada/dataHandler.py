@@ -1,14 +1,18 @@
 import os
 import pickle
-from puntPlay import PuntPlay  
 
 INFO_DAT_FILENAME = "info.dat"
+infoFileChecked = False
 
 def createInfoDatIfNotExists(directoryPath):
     """
     If 'info.dat' does not exist in 'directoryPath', create it with 750 empty slots.
     Each slot will initially be None to indicate it's empty.
     """
+    global infoFileChecked
+
+    if infoFileChecked:
+        return
     filePath = os.path.join(directoryPath, INFO_DAT_FILENAME)
     if not os.path.exists(filePath):
         print("Creating 'info.dat' with 750 empty records...")
@@ -17,6 +21,8 @@ def createInfoDatIfNotExists(directoryPath):
             pickle.dump(emptySlots, f)
     else:
         print(f"The file '{INFO_DAT_FILENAME}' already exists. No new file created.")
+
+    infoFileChecked = True
 
 def loadInfoDat(directoryPath):
     """

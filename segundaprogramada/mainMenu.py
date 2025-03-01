@@ -48,10 +48,10 @@ def loadCsvData(dataDirectory):
         "part1-insertion-result.csv",
         "part1-merge_sort-result.csv",
         "part1-quicksort-result.csv",
-        # "part2-bubble-result.csv",
-        # "part2-insertion-result.csv",
-        # "part2-merge_sort-result.csv",
-        # "part2-quicksort-result.csv",
+        "part2-bubble-result.csv",
+        "part2-insertion-result.csv",
+        "part2-merge_sort-result.csv",
+        "part2-quicksort-result.csv",
     ]
     
     for csvFile in csvFiles:

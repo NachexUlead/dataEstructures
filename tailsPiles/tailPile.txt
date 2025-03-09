@@ -1,0 +1,179 @@
+
+Ejercicio a
+
+Base → 11 14 -10 20 30 1 3 5 4 9 12 ← Tope
+
+Proceso:
+
+pop() → Se elimina 12
+pop() → Se elimina 9
+pop() → Se elimina 4
+pop() → Se elimina 5
+pop() → Se elimina 3
+pop() → Se elimina 1
+pop() → Se elimina 30
+pop() → Se elimina 20
+pop() → Se elimina -10 (aquí se obtiene el número negativo en la cima)
+
+
+Respuesta:
+Se deben sacar 8 elementos con la operación pop() para que el número negativo -10 quede en la cima de la pila.
+
+Ejercicio B
+
+Base → 11 14 -10 20 30 1 3 5 4 9 12 ← Tope
+
+Proceso:
+
+pop() -> se elimina 12
+Base → 11 14 -10 20 30 1 3 5 4 9 ← Tope
+
+pop() -> se elimina 9 
+Base → 11 14 -10 20 30 1 3 5 4 ← Tope
+
+push(19) -> se añade 19 al tope 
+Base → 11 14 -10 20 30 1 3 5 4 19 ← Tope
+
+pop() -> se elimina 19 
+Base → 11 14 -10 20 30 1 3 5 4 ← Tope
+
+pop() -> se elimina 4
+Base → 11 14 -10 20 30 1 3 5 ← Tope
+
+pop() -> se elimina 5
+Base → 11 14 -10 20 30 1 3 ← Tope
+
+push(8) -> se añade 8
+Base → 11 14 -10 20 30 1 3 8 ← Tope
+
+push(7) -> se añade 7
+Base → 11 14 -10 20 30 1 3 8 7 ← Tope
+
+push(11) -> se añade 11
+Base → 11 14 -10 20 30 1 3 8 7 11 ← Tope
+
+pop() -> se elimina 11
+Base → 11 14 -10 20 30 1 3 8 7 ← Tope
+
+push(22) -> se añade 22
+Base → 11 14 -10 20 30 1 3 8 7 22 ← Tope
+
+
+Estado final de la pila
+Base → 11 14 -10 20 30 1 3 8 7 22 ← Tope
+
+
+Ejercicio C
+
+pop() → Se elimina 12
+pop() → Se elimina 9
+pop() → Se elimina 19
+pop() → Se elimina 4
+pop() → Se elimina 5
+pop() → Se elimina 11
+
+Lista de números que salieron de la pila:
+12, 9, 19, 4, 5, 11
+
+
+Ejercicio D 
+
+Para sacar el número 14 de la pila, recuerda que una pila sigue
+el principio LIFO (Last In, First Out), lo que significa que solo podemos acceder y eliminar elementos desde el tope.
+
+Estado actual de la pila
+
+Base → 11 14 -10 20 30 1 3 8 7 22 ← Tope
+
+pop() → Se elimina 22
+pop() → Se elimina 7
+pop() → Se elimina 8
+pop() → Se elimina 3
+pop() → Se elimina 1
+pop() → Se elimina 30
+pop() → Se elimina 20
+pop() → Se elimina -10
+pop() → Se elimina 14 
+
+
+Ejercicio E 
+
+No hay problema en que haya elementos repetidos en una pila,
+pero si necesitas buscar o eliminar un elemento específico, puede complicar las operaciones
+
+
+
+
+2.
+
+Ejercicio a 
+
+Inicio → 5 99 23 12 24 33 12 ← Fin
+
+Recordemos las reglas de una cola (FIFO - First In, First Out):
+
+dequeue(): Elimina el elemento del frente de la cola.
+enqueue(x): Agrega el elemento al final de la cola.
+
+
+dequeue() → Se elimina 5
+enqueue(99) → Se agrega 99 al final
+dequeue() → Se elimina 99
+dequeue() → Se elimina 23
+enqueue(21) → Se agrega 21 al final
+enqueue(12) → Se agrega 12 al final
+dequeue() → Se elimina 12
+enqueue(10) → Se agrega 10 al final
+dequeue() → Se elimina 24
+enqueue(81) → Se agrega 81 al final
+enqueue(1) → Se agrega 1 al final
+enqueue(19) → Se agrega 19 al final
+dequeue() → Se elimina 33
+enqueue(11) → Se agrega 11 al final
+dequeue() → Se elimina 12
+enqueue(9) → Se agrega 9 al final
+dequeue() → Se elimina 99
+enqueue(8) → Se agrega 8 al final
+enqueue(80) → Se agrega 80 al final
+enqueue(42) → Se agrega 42 al final
+dequeue() → Se elimina 21
+enqueue(10) → Se agrega 10 al final
+enqueue(23) → Se agrega 23 al final
+
+Estado final 
+Inicio → 12 10 81 1 19 11 9 8 80 42 10 23 ← Fin
+
+
+3.
+
+Inicio → 12 10 81 1 19 11 9 8 80 42 10 23 ← Fin
+
+dequeue() → Se elimina 12
+enqueue(99) → Es impar, se coloca al inicio
+dequeue() → Se elimina 10
+dequeue() → Se elimina 81
+enqueue(21) → Es impar, se coloca en orden de prioridad (99 sigue siendo el mayor)
+enqueue(12) → Es par, se coloca al final
+dequeue() → Se elimina 99
+enqueue(10) → Es par, se coloca al final
+dequeue() → Se elimina 21
+enqueue(81) → Es impar y mayor, se coloca al inicio
+enqueue(1) → Es impar, se coloca después de los impares existentes
+enqueue(19) → Es impar, se coloca en orden de prioridad
+dequeue() → Se elimina 81
+enqueue(11) → Es impar, se coloca en orden de prioridad
+dequeue() → Se elimina 19
+enqueue(9) → Es impar, se coloca en orden de prioridad
+dequeue() → Se elimina 11
+enqueue(8) → Es par, se coloca al final
+enqueue(80) → Es par, se coloca al final
+enqueue(42) → Es par, se coloca al final
+dequeue() → Se elimina 9
+enqueue(10) → Es par, se coloca al final
+enqueue(23) → Es impar, se coloca en orden de prioridad
+
+Estado final
+Inicio → 23 1 19 11 9 1 8 80 42 10 23 12 10 8 80 42 10 ← Fin
+
+
+

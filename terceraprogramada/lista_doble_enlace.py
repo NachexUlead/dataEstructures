@@ -1,20 +1,24 @@
-from nodo_doble_enlace import nodo_doble
+from nodo_doble_enlace import NodoDoble
 
 class ListaDobleOrdenada:
     def __init__(self):
-        self.__list = None
+        self.head = None
+        self.tail = None
 
     def insertar(self, persona):
-        nuevo_nodo = nodo_doble(persona)
+        nuevo_nodo = NodoDoble(persona)
 
-        if self.__list is None or self.__list.getData().edad > persona.edad:
-            nuevo_nodo.setNext(self.__list)
-            if self.__list:
-                self.__list.setPrev(nuevo_nodo)
-            self.__list = nuevo_nodo
+        if self.head is None or self.head.getData().edad > persona.edad:
+            nuevo_nodo.setNext(self.head)
+            if self.head:
+                self.head.setPrev(nuevo_nodo)
+            self.head = nuevo_nodo
+            if self.tail is None:
+                self.tail = nuevo_nodo
+            print(f"{persona} fue agregado correctamente.")
             return
 
-        current = self.__list
+        current = self.head
         while current.getNext() and current.getNext().getData().edad < persona.edad:
             current = current.getNext()
 
@@ -22,14 +26,17 @@ class ListaDobleOrdenada:
         nuevo_nodo.setPrev(current)
         if current.getNext():
             current.getNext().setPrev(nuevo_nodo)
+        else:
+            self.tail = nuevo_nodo
         current.setNext(nuevo_nodo)
+        print(f"{persona} fue agregado correctamente.")
 
     def imprimir(self):
-        if self.__list is None:
-            print("la lista esta vacia.")
+        if self.head is None:
+            print("la lista esta vacía.")
             return
 
-        current = self.__list
+        current = self.head
         contador = 0
         while current:
             print(current.getData())
@@ -39,11 +46,11 @@ class ListaDobleOrdenada:
         print(f"total de personas en la lista: {contador}")
 
     def eliminar_por_posicion(self, posicion):
-        if self.__list is None:
+        if self.head is None:
             print("la lista esta vacia.")
             return
 
-        current = self.__list
+        current = self.head
         index = 0
 
         while current and index < posicion:
@@ -59,26 +66,39 @@ class ListaDobleOrdenada:
                 current.getNext().setPrev(current.getPrev())
 
             if posicion == 0:
-                self.__list = current.getNext()
+                self.head = current.getNext()
+                if self.head:
+                    self.head.setPrev(None)
+                else:
+                    self.tail = None
 
-            print(f"se elimino la persona en la posicion {posicion}.")
+            print(f"se elimino: {current.getData()}")
 
     def buscar_por_edad(self, edad):
-        if self.__list is None:
+        if self.head is None:
             print("la lista esta vacia.")
             return
 
-        encontrados = []
-        current = self.__list
+        if abs(self.head.getData().edad - edad) < abs(self.tail.getData().edad - edad):
+            current = self.head
+            direccion = "desde el inicio"
+        else:
+            current = self.tail
+            direccion = "desde el final"
 
+        encontrados = []
         while current:
             if current.getData().edad == edad:
                 encontrados.append(current.getData())
-            current = current.getNext()
+
+            if direccion == "desde el inicio":
+                current = current.getNext()
+            else:
+                current = current.getPrev()
 
         if encontrados:
-            print("personas encontradas con la edad", edad)
+            print(f"personas encontradas con la edad {edad}:")
             for persona in encontrados:
                 print(persona)
         else:
-            print("no se encontro ninguna persona con esa edad.")
+            print(f"no se encontro ninguna persona con la edad {edad}.")

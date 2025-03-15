@@ -1,4 +1,4 @@
-class nodo_doble:
+class NodoDoble:
     def __init__(self, data):
         self.__data = data
         self.__next = None

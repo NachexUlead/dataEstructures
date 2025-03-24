@@ -1,0 +1,12 @@
+                Berkeley  Concord  LosAngeles  Merced  Modesto  Pleasanton  Sacramento  SanFrancisco  SanJose  Stockton  Tracy
+Berkeley           0         24         0         0       0         580         80            0          0        0       0
+Concord           24          0         0         0       0         680          0            0          0        4       0
+LosAngeles         0          0         0        99       0           0          0            0        101        5       5
+Merced             0          0        99         0      99           0          0            0          0        0       0
+Modesto            0          0         0        99       0           0          0            0          0       99     132
+Pleasanton       580        680         0         0       0           0          0            0        680        0     580
+Sacramento         80         0         0         0       0           0          0            0          0       99       0
+SanFrancisco        0         0         0         0       0           0          0            0        880        0       0
+SanJose             0         0       101         0       0         680          0          880          0        0       0
+Stockton            0         4         5         0      99           0         99            0          0        0       0
+Tracy               0         0         5         0     132         580          0            0          0        0       0

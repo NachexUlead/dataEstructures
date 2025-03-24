@@ -1,0 +1,117 @@
+Desde Los Angeles
+Paso a paso con retrocesos:
+
+Los Angeles
+↓ (5)
+
+Tracy
+↓ (132)
+
+Modesto
+↓ (99)
+
+Merced
+← (regresa a Modesto)
+← (regresa a Tracy)
+
+Stockton (desde LA por I-5 → 5)
+↓ (4)
+
+Concord
+↓ (680)
+
+Pleasanton
+↓ (580)
+
+Berkeley
+↓ (80)
+
+Sacramento
+← (regresa a Berkeley)
+← (a Pleasanton)
+↓ (680)
+
+San Jose
+↓ (880)
+
+San Francisco
+
+Resultado final:
+Los Angeles → Tracy → Modesto → Merced → Stockton → Concord → Pleasanton → Berkeley → Sacramento → San Jose → San Francisco
+
+Desde Berkeley
+Paso a paso:
+
+Berkeley
+↓ (24)
+
+Concord
+↓ (4)
+
+Stockton
+↓ (99)
+
+Modesto
+↓ (99)
+
+Merced
+← (regresa a Modesto → Stockton)
+
+Tracy (vía Modesto → Hwy 132)
+↓ (5)
+
+Los Angeles
+↓ (101)
+
+San Jose
+↓ (880)
+
+San Francisco
+← (regresa a San Jose → LA → Tracy → Modesto → Stockton → Concord)
+
+Pleasanton (desde Concord → 680)
+← (regresa a Berkeley)
+
+Sacramento (desde Berkeley → 80)
+
+Resultado final:
+Berkeley → Concord → Stockton → Modesto → Merced → Tracy → Los Angeles → San Jose → San Francisco → Pleasanton → Sacramento
+
+Desde Concord
+Paso a paso:
+
+Concord
+↓ (4)
+
+Stockton
+↓ (99)
+
+Modesto
+↓ (99)
+
+Merced
+← (regresa a Modesto → Stockton)
+
+Tracy (vía Modesto → 132)
+↓ (5)
+
+Los Angeles
+↓ (101)
+
+San Jose
+↓ (880)
+
+San Francisco
+← (regresa a San Jose → LA → Tracy → Modesto → Stockton)
+
+Pleasanton (desde Concord → 680)
+↓ (580)
+
+Berkeley
+↓ (80)
+
+Sacramento
+
+Resultado final:
+Concord → Stockton → Modesto → Merced → Tracy → Los Angeles → San Jose → San Francisco → Pleasanton → Berkeley → Sacramento
+

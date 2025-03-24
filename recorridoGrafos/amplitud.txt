@@ -1,0 +1,84 @@
+Desde Merced
+Paso a paso (BFS con menor valor):
+
+Merced
+
+→ Modesto (99)
+
+→ Los Angeles (99)
+
+→ Stockton (99)
+
+→ Tracy (132)
+
+→ Pleasanton (580)
+
+→ Concord (680)
+
+→ Berkeley (580)
+
+→ Sacramento (99)
+
+→ San Jose (680)
+
+→ San Francisco (880)
+
+Resultado final:
+Merced → Modesto → Los Angeles → Stockton → Tracy → Pleasanton → Concord → Berkeley → Sacramento → San Jose → San Francisco
+
+Desde Concord
+Paso a paso:
+
+Concord
+
+→ Stockton (4)
+
+→ Pleasanton (680)
+
+→ Berkeley (24)
+
+→ Tracy (580)
+
+→ Modesto (99)
+
+→ Merced (99)
+
+→ Los Angeles (5)
+
+→ Sacramento (99)
+
+→ San Jose (680)
+
+→ San Francisco (880)
+
+Resultado final:
+Concord → Stockton → Pleasanton → Berkeley → Tracy → Modesto → Merced → Los Angeles → Sacramento → San Jose → San Francisco
+
+Desde Los Angeles
+Paso a paso:
+
+Los Angeles
+
+→ Tracy (5)
+
+→ Stockton (5)
+
+→ Merced (99)
+
+→ Modesto (132)
+
+→ Pleasanton (580)
+
+→ Concord (680)
+
+→ Berkeley (580)
+
+→ Sacramento (99)
+
+→ San Jose (101)
+
+→ San Francisco (880)
+
+Resultado final:
+Los Angeles → Tracy → Stockton → Merced → Modesto → Pleasanton → Concord → Berkeley → Sacramento → San Jose → San Francisco
+

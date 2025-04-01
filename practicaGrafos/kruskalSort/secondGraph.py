@@ -15,5 +15,5 @@ edges2 = [
 for u, v in edges2:
     g2.addEdge(ord(u) - ord('a'), ord(v) - ord('a'), node_values_2[u] + node_values_2[v])
 
-print("=== MST for Graph 2 ===")
+print("MST for Graph 2")
 g2.KruskalMST()

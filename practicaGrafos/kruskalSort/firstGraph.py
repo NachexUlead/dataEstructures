@@ -18,5 +18,5 @@ for u, v in edges1:
     g1.addEdge(ord(u) - ord('a'), ord(v) - ord('a'),
                node_values_1[u] + node_values_1[v])
 
-print("=== MST for Graph 1 ===")
+print("MST for Graph 1")
 g1.KruskalMST()
